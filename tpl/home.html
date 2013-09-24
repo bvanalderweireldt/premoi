@@ -3,5 +3,7 @@
 {% block head %}{%endblock%}
 
 {% block content %}
-	<h1>Their is something interesting for you here !</h1>
+	{% for slider in sliders %}
+		<h1>{{ slider.title }}</h1>
+	{% endfor %} 
 {% endblock %}	
