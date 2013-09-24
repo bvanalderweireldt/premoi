@@ -2,3 +2,8 @@
 *.pot
 *.pyc
 local_settings.py
+node_modules
+.project
+.pydevproject
+.sass-cache
+static/upload/*

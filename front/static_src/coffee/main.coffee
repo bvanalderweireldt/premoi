@@ -1,0 +1,2 @@
+load = ->
+	return 'benoit'
