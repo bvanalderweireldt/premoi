@@ -9,6 +9,7 @@ JS_PATH = DEST_PATH + '/js/';
 CSS_PATH = DEST_PATH + '/css/';
 
 SASS_MAIN = SASS_PATH + 'main.scss';
+SASS_ALERT_MOI = SASS_PATH + 'alertmoi.scss';
 COFFEE_PREMOI = COFFEE_PATH + '*.coffee';
 
 module.exports = function(grunt) {
@@ -29,7 +30,8 @@ module.exports = function(grunt) {
 		sass: {
 			dist: {
 				files: {
-					'static/css/main.css' : SASS_MAIN
+					'static/css/main.css' : SASS_MAIN,
+					'static/css/alertmoi.css' : SASS_ALERT_MOI
 				}
 			}
 		},
@@ -65,12 +67,6 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		jshint: {
-			options:{
-				force: true
-			},
-			all: ['Gruntfile.js', JS_PATH + '**/*.js']
-		},
 		csslint:{
 			options: {
 				import: 2,
@@ -86,9 +82,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-csslint');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	// Define your tasks here
-	grunt.registerTask('default', ['sass', 'coffee', 'cssmin', 'uglify', 'csslint', 'jshint', 'clean']);
+	grunt.registerTask('default', ['sass', 'coffee', 'cssmin', 'uglify', 'csslint', 'clean']);
 	};
