@@ -1,0 +1,25 @@
+{% load i18n %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{% trans "Premoi" %}</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="copyright" content="©BVanalderweireldt" />
+		<meta name="author" lang="en" content="Benoit Vanalderweireldt" />
+		<meta name="robots" content="Index,Follow" />
+		<meta name="description" content="{% trans "Premoi - Present me something !" }%" />
+		<meta name="keywords" content="{% trans "Premoi" %}" />
+		
+		<link href="{% static "css/main.min.css" %}" media="screen" rel="stylesheet" type="text/css">
+		<script src="{% static "js/premoi.min.js" %}" type="text/javascript"></script>
+
+		{% block head %}{%endblock%}
+	</head>
+	<body>
+		{% block content %}
+			<h1>Their is nothing interesting for you here !</h1>
+		{% endblock %}	
+	</body>
+</html>
