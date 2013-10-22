@@ -4,7 +4,9 @@ $( document ).ready ->
 loadSliders = ->
 	console.log ( "success" ) 
 	$.getJSON( 'sliders')
-	.done ->
-		alertMoi('ceci est l appel')
-	.fail ->
-		alertMoi('ceci est l appel')
+		.done (data) ->
+			slidersJson = JSON.parse( JSON.stringify(data) )
+			alertMoi(slidersJson[0].fields.image)
+			
+		.fail ->
+			alertMoi('Error while loading !')

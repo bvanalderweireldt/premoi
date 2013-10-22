@@ -31,7 +31,6 @@ module.exports = function(grunt) {
 			dist: {
 				files: {
 					'static/css/main.css' : SASS_MAIN,
-					'static/css/alertmoi.css' : SASS_ALERT_MOI
 				}
 			}
 		},
@@ -72,7 +71,7 @@ module.exports = function(grunt) {
 				import: 2,
 				force:true
 			},
-			src: [CSS_PATH + '*min.css']
+			src: [CSS_PATH + 'main.css']
 		},
 		clean: [ JS_PATH + 'premoi.js', CSS_PATH + 'main.css']
 	});

@@ -77,9 +77,11 @@ $(document).ready(function() {
 
 loadSliders = function() {
   console.log("success");
-  return $.getJSON('sliders').done(function() {
-    return alertMoi('ceci est l appel');
+  return $.getJSON('sliders').done(function(data) {
+    var slidersJson;
+    slidersJson = JSON.parse(JSON.stringify(data));
+    return alertMoi(slidersJson[0].fields.image);
   }).fail(function() {
-    return alertMoi('ceci est l appel');
+    return alertMoi('Error while loading !');
   });
 };

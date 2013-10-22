@@ -1,0 +1,28 @@
+//Add a gradient background + a fall back color
+@mixin gradient($fallBackColor, $fromColor, $toColor) {
+   background-color: $fallBackColor;
+
+   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($fromColor), to($toColor));
+   background-image: -webkit-linear-gradient(top, $fromColor, $toColor);
+   background-image:    -moz-linear-gradient(top, $fromColor, $toColor);
+   background-image:     -ms-linear-gradient(top, $fromColor, $toColor);
+   background-image:      -o-linear-gradient(top, $fromColor, $toColor);
+}
+
+//Add transition
+@mixin transition($time) {
+	transition: all ease-in $time;
+	-webkit-transition: all ease-in $time;
+	-moz-transition: all ease-in $time;
+	-o-transition: all ease-in $time;
+	-ms-transition: all ease-in $time;	
+}
+
+//box-sizing
+@mixin boxSizing() {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}

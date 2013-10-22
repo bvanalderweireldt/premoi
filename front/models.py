@@ -15,4 +15,4 @@ class Slider(models.Model):
         return self.title
     title = models.CharField( max_length = 200 )
     link = models.URLField()
-    image = models.ImageField( upload_to = APP_PATH + '/static/slider' )
+    image = models.ImageField( upload_to = APP_PATH + '/static/images/slider' )

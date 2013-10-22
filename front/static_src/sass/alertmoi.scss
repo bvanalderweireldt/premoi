@@ -1,18 +1,8 @@
 $baseColor:#0C7AB9;
 $borderColor:#4C4D4C;
-
+$baseFontSize:1.2em;
 $buttonGradientFromColor:#5CB811;
 $buttonGradientToColor:#3B7808;
-
-@mixin gradient($fallBackColor, $fromColor, $toColor) {
-   background-color: $fallBackColor;
-
-   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($fromColor), to($toColor));
-   background-image: -webkit-linear-gradient(top, $fromColor, $toColor);
-   background-image:    -moz-linear-gradient(top, $fromColor, $toColor);
-   background-image:     -ms-linear-gradient(top, $fromColor, $toColor);
-   background-image:      -o-linear-gradient(top, $fromColor, $toColor);
-}
 
 .alertmoi{
 	background-color:#FFFFFF;
@@ -25,6 +15,7 @@ $buttonGradientToColor:#3B7808;
 	z-index:999;
 	border: 0.5em solid $borderColor;
 	border-radius:5px;
+	@include boxSizing();
 	.content, .button{
 		position:relative;
 	}
@@ -32,6 +23,7 @@ $buttonGradientToColor:#3B7808;
 		width: auto;
 		padding:1em;
 		text-align: center;
+		font-size: $baseFontSize;
 	}
 	.button{
 		text-align: center;
@@ -42,10 +34,10 @@ $buttonGradientToColor:#3B7808;
 		margin: auto;
 		color:#FFFFFF;
 		border-radius:3px;
-		transition: all ease-in 0.5s;
+		@include transition(.5s);
 		&:hover{
 			cursor: pointer;
-			box-shadow: 0px 0px 8px $borderColor;
+			box-shadow: 0 0 8px $borderColor;
 		}
 	}
 }
@@ -61,7 +53,7 @@ $buttonGradientToColor:#3B7808;
 	height:100%;
 	background-color:#FFFFFF;
 	opacity:0;
-	transition: all ease-in 2s;
+	@include transition(2s);
 }
 
 .hiderOpacity{
