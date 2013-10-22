@@ -1,5 +1,9 @@
 $bodyGradientTo:#A0A0A0;
 $bodyGradientFrom:#FFFFFF;
+$backgroundColor:#2F2F2F;
+
+@import "mixins.scss";
+@import "alertmoi.scss";
 
 html, body{
 	width:100%;
@@ -8,7 +12,5 @@ html, body{
 	padding:0;	
 }
 body{
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$bodyGradientTo', endColorstr='$bodyGradientFrom');
-	background: -webkit-gradient(linear, left top, left bottom, from($bodyGradientTo), to($bodyGradientFrom));
-	background: -moz-linear-gradient(top,  $bodyGradientTo,  $bodyGradientFrom);
+	background-color:$backgroundColor;
 }

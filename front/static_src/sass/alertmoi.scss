@@ -1,0 +1,61 @@
+$baseColor:#0C7AB9;
+$borderColor:#4C4D4C;
+$baseFontSize:1.2em;
+$buttonGradientFromColor:#5CB811;
+$buttonGradientToColor:#3B7808;
+
+.alertmoi{
+	background-color:#FFFFFF;
+	display:none;
+	width: 30%;
+	min-height: 25%;
+	position: absolute;
+	top: 40%;
+	left:35%;
+	z-index:999;
+	border: 0.5em solid $borderColor;
+	border-radius:5px;
+	@include boxSizing();
+	.content, .button{
+		position:relative;
+	}
+	.content{
+		width: auto;
+		padding:1em;
+		text-align: center;
+		font-size: $baseFontSize;
+	}
+	.button{
+		text-align: center;
+		@include gradient($baseColor, $buttonGradientFromColor, $buttonGradientToColor);
+		width: 5em;
+		height: 1.5em;
+		padding: 0.3em 0 0 0;
+		margin: auto;
+		color:#FFFFFF;
+		border-radius:3px;
+		@include transition(.5s);
+		&:hover{
+			cursor: pointer;
+			box-shadow: 0 0 8px $borderColor;
+		}
+	}
+}
+
+
+.hider{
+	top:0;
+	left:0;
+	z-index:998;
+	display:none;
+	position:absolute;
+	width:100%;
+	height:100%;
+	background-color:#FFFFFF;
+	opacity:0;
+	@include transition(2s);
+}
+
+.hiderOpacity{
+	opacity:0.6;	
+}

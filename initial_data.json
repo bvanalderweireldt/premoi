@@ -1,0 +1,20 @@
+[
+	{
+	    "model": "front.slider",
+	    "pk": 1,
+	    "fields": {
+	      "title": "Green",
+	      "link": "http://www.bv-blog.fr",
+	      "image": "/static/images/sliders/green-server.jpg"
+		}
+	},
+	{
+	    "model": "front.slider",
+	    "pk": 2,
+	    "fields": {
+	      "title": "Mainframe",
+	      "link": "http://www.bv-blog.fr",
+	      "image": "/static/images/sliders/mainframe.jpg"
+		}
+	}
+]

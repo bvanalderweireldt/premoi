@@ -5,6 +5,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', views.home, name='home'),
+    url(r'^sliders$', views.sliders, name='sliders'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
